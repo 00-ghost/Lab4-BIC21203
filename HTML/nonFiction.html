@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<style>
+    .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+
+        .sidenav a, .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+
+            .sidenav a:hover, .dropdown-btn:hover {
+                color: #f1f1f1;
+            }
+
+
+    .main {
+        margin-left: 200px;
+        font-size: 20px;
+        padding: 0px 10px;
+    }
+
+
+    .active {
+        background-color: green;
+        color: white;
+    }
+
+
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+
+
+    .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #f1f1f1;
+        padding: 20px;
+        font-family: Arial;
+    }
+
+    .content {
+        background-color: white;
+        padding: 10px;
+    }
+
+
+    @media screen and (max-width: 900px) {
+        .column {
+            width: 50%;
+        }
+    }
+
+
+    @media screen and (max-width: 600px) {
+        .column {
+            width: 100%;
+        }
+    }
+</style>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="main">
+
+        <style> h2,h5,table {text-align: center;}</style>
+        <h2>NON-FICTION SECTION</h2>
+        <h5>Note : Click The Title For Store Redirection</h5>
+
+        <TABLE border="10">
+            <img src="NF1.jpg" width="300" height="379">
+            <TR><TD>Code<TD>NF001
+            <TR><TD>Title<TD><a href="https://shopee.com.my/-English-Moneyball-The-Art-of-Winning-an-Unfair-Game-i.325282360.9365935149?sp_atk=4a011a28-0f11-459f-bcb3-3c84336edb74">Moneyball: The Art of Winning an Unfair Game
+            <TR><TD>Author<TD>Michael Lewis
+            <TR><TD>Description<TD>Moneyball: The Art of Winning an Unfair Game is a book by Michael Lewis, published in 2003, about the Oakland Athletics baseball team and its general manager Billy Beane. Its focus is the team's analytical, evidence-based, sabermetric approach to assembling a competitive baseball team despite Oakland's small budget.
+            <TR><TD>Avalibility<TD>Selling Fast
+            </Table>
+<P></P>
+<TABLE border="10">
+    <img src="NF2.jfif" width="300" height="379">
+    <TR><TD>Code<TD>NF002
+    <TR><TD>Title<TD><a href="https://www.bookdepository.com/Hiroshima-John-Hersey/9781684116881?redirected=true&utm_medium=Google&utm_campaign=Base4&utm_source=MY&utm_content=Hiroshima&selectCurrency=MYR&w=AFFZAU96BK2KP3A8V9QG">Hiroshima
+    <TR><TD>Author<TD>John Hersey
+    <TR><TD>Description<TD>Hiroshima is a 1946 book by American author John Hersey. It tells the stories of six survivors of the atomic bomb dropped on Hiroshima. It is regarded as one of the earliest examples of New Journalism, in which the story-telling techniques of fiction are adapted to non-fiction reporting.
+    <TR><TD>Avalibility<TD>Avalible
+    </Table>
+<P></P>
+<TABLE border="10">
+    <img src="NF3.jfif" width="300" height="379">
+    <TR><TD>Code<TD>NF003
+    <TR><TD>Title<TD><a href="https://www.bookdepository.com/Commitment-Didier-Drogba/9781473620681?redirected=true&utm_medium=Google&utm_campaign=Base1&utm_source=MY&utm_content=Commitment&selectCurrency=MYR&w=AFFZAU96QQ4V83A8V9QG">Commitment: My Autobiography
+    <TR><TD>Author<TD>Didier Drogba
+    <TR><TD>Description<TD>The story of one of the most recognisable and successful players in world football. Didier Drogba is renowned for his heading ability, sharp shooting and sheer strength. He has played for his native Ivory Coast and for clubs in France, China and Turkey, but it is as a Chelsea striker that he is best known.
+    <TR><TD>Avalibility<TD>Limited Edition 
+    </Table>
+<P></P>
+    <div class="sidenav">
+        <a href="Homepage.html">Home</a>
+        <a href="SignUp.html">Sign-Up</a>
+        <button class="dropdown-btn">Categories
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="Fiction.html">Fiction</a>
+            <a href="nonFiction.html">Non Fiction</a>
+            <a href="Poetry.html">Poetry</a>
+            <a href="Kids.html">Kids</a>
+            <a href="Self-Help.html">Self-Help</a>
+        </div>
+        <a href="Purchase2.HTML">Your Cart</a>
+    </div>
+    </div>
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+         }
+    </script>
+</body>
+</html>

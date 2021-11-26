@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<style>
+    *{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-color: grey;
+  font-family: sans-serif;
+
+}
+
+.mr-container{
+	background-color: white;
+	width: 900px;
+	padding: 40px;
+	margin: 0 auto;
+	display: flex;
+	margin-top: 20px;
+}
+
+
+.additem {
+  margin: .4em;
+}
+
+.sale-info-parent{
+	width: 80%;
+}
+
+.info-clicks-parent{
+	margin-top: 50px;
+}
+
+.info-price-parent{
+	display: flex;
+}
+
+.info-total{
+	width: 35%;
+	display: flex;
+	align-items: center;
+	font-size: 3em;
+}
+
+.price{
+	display: flex;
+	align-items: center;
+	font-size: 6em;
+}
+
+.dolar{
+	font-size: 2em;
+}
+.sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+   
+    .main {
+        margin-left: 200px;
+        font-size: 20px;
+        padding: 0px 10px;
+    }
+
+    
+    .active {
+        background-color: green;
+        color: white;
+    }
+
+   
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+
+  
+    .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+    }
+    body, html {
+        height: 100%;
+    }
+
+    button {
+  background-color: #042baa;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.submitbtn {
+  float: left;
+  width: 50%;
+}
+
+    .hero-image {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("book1.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap');
+    .hero-text {
+        text-align: center;
+        font-family: Pacifico;
+        font-size: xx-large;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        TRansform: TRanslate(-50%, -50%);
+        color: rgb(255, 255, 255);
+    }
+
+</style>
+<html>
+    <body>
+        <div class="mr-container">
+          <div class="sale-info-parent">
+                <div class="info-title-parent">
+                    <h1>Sumarry</h1>
+                </div>
+                <div class="info-clicks-parent">
+                    <form id="booklist" action="get">
+
+                        <h3>Your Cart</h3>
+                        <TABLE border="7">
+                            <TR><TD><input type="checkbox" class="additem" onclick="updatePrice(this, 75)">[F001] Dune</TD>
+                            <TR><TD><input type="checkbox" class="additem" onclick="updatePrice(this, 45)">[F002] Dracula</TD>
+                            <TR><TD><input type="checkbox" class="additem" onclick="updatePrice(this, 44)">[F003] The Young Elites </TD>
+                            </TABLE>
+
+                    </form>
+                </div>
+                <div class="info-price-parent">
+                    <div class="info-total">Price After Benefits :</div>
+                    <div class="dolar">RM</div>
+                    <div class="price" id="price">0</div>
+                </div>
+        </div>
+        <script>
+            let basePrice = 0;
+            let currentPrice = basePrice;
+            function updatePrice(chk, value) {
+            if (chk.checked) {
+             currentPrice += value;
+             }
+        else {
+            currentPrice -= value;
+             }
+            document.querySelector("#price").textContent = currentPrice;
+            }
+
+        </script>
+       <script>
+        function myFunction() {
+          document.getElementById("booklist").innerHTML;
+        }
+        </script>
+    </body>
+</html>

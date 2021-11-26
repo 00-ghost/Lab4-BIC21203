@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<style>
+    .cart a {
+  background-color: royalblue;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+   
+.add-button {
+  background-color: #dd0b7f;
+  color: white;
+  padding: 8px 15px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+  border-radius: 12px;
+}
+    *{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-color: grey;
+  font-family: sans-serif;
+
+}
+
+.mr-container{
+	background-color: white;
+	width: 900px;
+	padding: 40px;
+	margin: 0 auto;
+	display: flex;
+	margin-top: 20px;
+}
+
+.sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(17, 17, 17);
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+        
+        .sidenav a, .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+           
+            .sidenav a:hover, .dropdown-btn:hover {
+                color: #f1f1f1;
+            }
+
+    
+    .main {
+        margin-left: 200px;
+        font-size: 20px;
+        padding: 0px 10px;
+    }
+
+    
+    .active {
+        background-color: green;
+        color: white;
+    }
+
+   
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+
+  
+    .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+    }
+
+
+</style>
+<html>
+    <body>
+        <div class="sidenav">
+            <a href="Homepage.html">Home</a>
+            <a href="SignUp.html">Sign-Up</a>
+            <button class="dropdown-btn">Categories
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="Fiction.html">Fiction</a>
+                <a href="nonFiction.html">Non Fiction</a>
+                <a href="Poetry.html">Poetry</a>
+                <a href="Kids.html">Kids</a>
+                <a href="Self-Help.html">Self-Help</a>
+            </div>
+            
+            <a href="Purchase2.html">Your Cart</a>
+            <div>
+            <ol class="cart">
+                <a href="Summary.html">
+                    Sumarry : <span>0</span>
+                </a>
+            </ol>
+            </div>
+        </div>
+        <div class="mr-container">
+          <div class="sale-info-parent">
+                <div class="info-title-parent">
+                    <h1>E-BookStore Cart</h1>
+                    <br>
+                    <br>
+                </div>
+                <div class="info-clicks-parent">
+                    <form id="booklist">
+                        <h2>Fiction</h2>
+                        <br>
+                        <div>
+                            <alt="F001">
+                            <class="additem">Dune
+                            <div>
+                             <button class="add-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div>
+                            <alt="F002">
+                            <class="additem">Dracula
+                            <div>
+                                <button class="add-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div>
+                            <alt="F003">
+                            <class="additem">The Young Elites
+                            <div>
+                                <button class="add-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+
+                        <br>
+                        <h2>Non - Fiction</h2>
+                        <br>
+                        <div>
+                            <alt="NF001">
+                            <class="additem">Moneyball: The Art of Winning an Unfair Game
+                            <div>
+                                <button class="add-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div>
+                            <alt="NF002">
+                            <class="additem">Hiroshima
+                            <div>
+                                <button class="add-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div>
+                            <alt="NF003">
+                            <class="additem">Commitment: My Autobiography
+                            <div>
+                                <button class="add-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <br>
+
+
+                        <br>
+                        <h2>Poetry</h2>
+                        <br>
+                        <div>
+                            <alt="P001">
+                            <class="additem">My Greenhouse
+                            <div>
+                                <button class="add-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div>
+                            <alt="P002">
+                            <class="additem">Odyssey
+                            <div>
+                                <button class="add-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div>
+                            <alt="P003">
+                            <class="additem">Home Body
+                            <div>
+                                <button class="add-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <br>
+
+
+                        <br>
+                        <h2>Kids</h2>
+                        <br>
+                        <div>
+                            <alt="K001">
+                            <class="additem">The Cat in the Hat
+                            <div>
+                                <button class="add-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div>
+                            <alt="K002">
+                            <class="additem">The Tale of Peter Rabbit
+                            <div>
+                                <button class="add-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div>
+                            <alt="K003">
+                            <class="additem">The Ugly Duckling
+                            <div>
+                                <button class="add-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <br>
+
+                        
+                        <br>
+                        <h2>Self-Help</h2>
+                        <br>
+                        <div>
+                            <alt="SH001">
+                            <class="additem">The Subtle Art Of Not Giving A F***
+                            <div>
+                                <button class="add-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div>
+                            <alt="SH002">
+                            <class="additem">The Secret
+                            <div>
+                                <button class="add-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div>
+                            <alt="SH003">
+                            <class="additem">12 Rules For Life
+                            <div>
+                                <button class="add-button">Buy Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+        <script>
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+    
+            for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            } else {
+            dropdownContent.style.display = "block";
+            }
+            });
+             }
+        </script>
+        
+    </body>
+</html>

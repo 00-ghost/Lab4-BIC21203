@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+/* ----------------- CART PAGE --------------- */
+
+.container-products {
+  max-width: 700px;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+.product-header {
+  width: 87%;
+  max-width: 650px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 4px solid rgb(233, 68, 2);
+  margin: 0 auto;
+}
+
+.product-title {
+  width: 35%;
+}
+
+.price {
+  width: 25%;
+  border-bottom: 1px solid rgb(233, 68, 2);
+  display: flex;
+  align-items: center;
+}
+
+.quantity {
+  width: 20%;
+  border-bottom: 1px solid rgb(233, 68, 2);
+  display: flex;
+  align-items: center;
+}
+
+.total {
+  width: 10%;
+  border-bottom: 1px solid rgb(233, 68, 2);
+  display: flex;
+  align-items: center;
+}
+
+.product {
+  width: 35%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(233, 68, 2);
+}
+
+.product ion-icon {
+  cursor: pointer;
+}
+
+.products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.basketTotalContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.basketTotalTitle {
+  width: 25%;
+}
+
+.basketTotal {
+  width: 20%;
+}
+

@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<style>
+    .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+
+        .sidenav a, .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+
+            .sidenav a:hover, .dropdown-btn:hover {
+                color: #f1f1f1;
+            }
+
+
+    .main {
+        margin-left: 200px;
+        font-size: 20px;
+        padding: 0px 10px;
+    }
+
+
+    .active {
+        background-color: green;
+        color: white;
+    }
+
+
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+
+
+    .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #ffffff;
+        padding: 20px;
+        font-family: Arial;
+    }
+
+    .content {
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+    }
+
+
+    @media screen and (max-width: 900px) {
+        .column {
+            width: 50%;
+        }
+    }
+
+
+    @media screen and (max-width: 600px) {
+        .column {
+            width: 100%;
+        }
+    }
+</style>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="main">
+
+     <style> h2,h5, table {text-align: center;}</style>
+        <h2>SELF-HELP SECTION</h2>
+        <h5>Note : Click The Title For Store Redirection</h5>
+
+
+            <TABLE border="10">
+            <img src="SH1.jpg" width="300" height="393">
+            <TR><TD>Code<TD>SH001
+            <TR><TD>Title<TD><a href="https://shopee.com.my/The-Subtle-Art-Of-Not-Giving-A-F*CK-i.66871038.5688959266?sp_atk=4d6f3058-df79-4b6e-a290-45229fdef185">The Subtle Art Of Not Giving A F***
+            <TR><TD>Author<TD>Mark Manson
+            <TR><TD>Description<TD>The Subtle Art of Not Giving a Fuck: A Counterintuitive Approach to Living a Good Life is the second book by blogger and author Mark Manson. In it Manson argues that life's struggles give it meaning, and that the mindless positivity of typical self-help books is neither practical nor helpful.
+            <TR><TD>Avalibility<TD>Selling Fast  
+            </Table>
+<P></P>
+             <TABLE border="10">
+            <img src="SH2.jpg" width="300" height="393">
+            <TR><TD>Code<TD>SH002
+            <TR><TD>Title<TD><a href="https://shopee.com.my/%E3%80%90Ready-Stock%E3%80%91The-Secret-i.3382325.2255760818?sp_atk=c97543be-70c9-45db-88ba-76d1a528631d">The Secret
+            <TR><TD>Author<TD>Rhonda Byrne
+            <TR><TD>Description<TD>The Secret is a 2006 self-help book by Rhonda Byrne, based on the earlier film of the same name. It is based on the belief of the law of attraction, which claims that thoughts can change a person's life directly. The book alleges Energy as assurance of its effectiveness.
+            <TR><TD>Avalibility<TD>Selling Fast
+            </Table>
+<P></P>
+            <TABLE border="10">
+            <img src="SH3.jpg" width="300" height="393">
+            <TR><TD>Code<TD>SH003
+            <TR><TD>Title<TD><a href="https://shopee.com.my/12-Rules-for-Life-An-Antidote-toChaos-Jordan-B-Peterson-i.325664984.5860118424?sp_atk=1871da08-7061-4328-98a9-a8e954405a8e">12 Rules For Life
+            <TR><TD>Author<TD> Jordan B. Peterson
+            <TR><TD>Description<TD>12 Rules for Life: An Antidote to Chaos is a 2018 self-help book by Canadian clinical psychologist and psychology professor Jordan Peterson. It provides life advice through essays in abstract ethical principles, psychology, mythology, religion, and personal anecdotes.
+            <TR><TD>Avalibility<TD>Selling Fast           
+            </Table>
+
+            <div class="sidenav">
+                <a href="Homepage.html">Home</a>
+                <a href="SignUp.html">Sign-Up</a>
+                <button class="dropdown-btn">Categories
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="Fiction.html">Fiction</a>
+                    <a href="nonFiction.html">Non Fiction</a>
+                    <a href="Poetry.html">Poetry</a>
+                    <a href="Kids.html">Kids</a>
+                    <a href="Self-Help.html">Self-Help</a>
+                </div>
+                <a href="Purchase2.HTML">Your Cart</a>
+            </div>
+    </div>
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+         }
+    </script>
+</body>
+</html>

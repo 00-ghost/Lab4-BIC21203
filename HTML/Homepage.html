@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<style>
+   
+    .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(2, 2, 2);
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+        
+        .sidenav a, .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #a50b84;
+            display: block;
+            border: none;
+            background: none;
+            width: 180%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+           
+            .sidenav a:hover, .dropdown-btn:hover {
+                color: #080000;
+            }
+
+    
+    .main {
+        margin-left: 200px;
+        font-size: 20px;
+        padding: 0px 10px;
+    }
+
+    
+    .active {
+        background-color: green;
+        color: rgb(7, 7, 7);
+    }
+
+   
+    .dropdown-container {
+        display: none;
+        background-color: #0a0a0a;
+        padding-left: 8px;
+    }
+
+  
+    .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+    }
+    body, html {
+        height: 100%;
+    }
+
+    .hero-image {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("1.jpg");
+        height: 130%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap');
+    .hero-text {
+        text-align: center;
+        font-family: Pacifico;
+        font-size: xx-large;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(255, 255, 255);
+    }
+</style>
+<html>
+<head>
+    <title>E-Bookstore</title>
+</head>
+<body>
+    <div class="sidenav">
+        <a href="Homepage.html">Home</a>
+        <a href="SignUp.html">Sign-Up</a>
+        <button class="dropdown-btn">Categories
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="Fiction.html">Fiction</a>
+            <a href="nonFiction.html">Non Fiction</a>
+            <a href="Poetry.html">Poetry</a>
+            <a href="Kids.html">Kids</a>
+            <a href="Self-Help.html">Self-Help</a>
+        </div>
+        <a href="Purchase2.HTML">Your Cart</a>
+    </div>
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+         }
+    </script>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>WELCOME</h1>
+            <h1>TO</h1>
+            <h1>E-BOOK STORE</h1>
+
+        </div>
+    </div>
+</body>
+</html>

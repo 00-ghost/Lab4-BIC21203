@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #ffffff;
+}
+
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: rgb(4, 164, 238);
+  outline: none;
+}
+
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+
+.container {
+  padding: 16px;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: #740db9;
+  padding-top: 50px;
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+</style>
+<body>
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content">
+    <div class="container">
+      <h1>New Account Sign-Up</h1>
+      <p>If you have an account proceed to login page.</p>
+      <hr>
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="phone number"><b>Phone Number</b></label>
+      <input type="text" placeholder="Enter Phone Number" name="phone number" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Re-enter Password</b></label>
+      <input type="password" placeholder="Re-enter Password" name="psw-repeat" required>
+      
+
+      <h1>Billing Details</h1>
+      <hr>
+         <label for="adrr1"><b>House Number</b></label>
+         <input type="text" placeholder="House Number" name="adrr1" required>
+     
+         <label for="adrr2"><b>Street Name</b></label>
+         <input type="text" placeholder="Street Name" name="adrr2" required>
+     
+         <label for="city"><b>City</b></label>
+         <input type="text" placeholder="Enter City" name="city" required>
+
+         <label for="postcode"><b>Post Code</b></label>
+         <input type="text" placeholder="Enter Post Code" name="postcode" required>
+
+        <label for="state"><b>State</b></label><br>
+      <select name=slist required>
+        <option value="Johor">Johor</option>
+        <option value="Kedah">Kedah</option>
+        <option value="Kelantan">Kelantan</option>
+        <option value="Kuala Lumpur">Kuala Lumpur</option>
+        <option value="Labuan">Labuan</option>
+        <option value="Malacca">Malacca</option>
+        <option value="Negeri Sembilan">Negeri Sembilan</option>
+        <option value="Pahang">Pahang</option>
+        <option value="Perak">Perak</option>
+        <option value="Perlis">Perlis</option>
+        <option value="Penang">Penang</option>
+        <option value="Sabah">Sabah</option>
+        <option value="Sarawak">Sarawak</option>
+        <option value="Selangor">Selangor</option>
+        <option value="Terengganu">Terengganu</option>
+        </select><br>
+        <br>
+
+        <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+          </label>
+     
+      <div class="clearfix">
+        <button type="button" class="cancelbtn" > <a href="Homepage.html">Cancel</button>
+          <button type="submit" class="signupbtn" onsubmit="window.open('Success.html');" >Sign Up</button> 
+      </div>
+  </form>
+</body>
+</html>
+
+

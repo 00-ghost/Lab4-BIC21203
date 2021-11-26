@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body{
+	background-color: rgb(252, 252, 252);
+  font-family: sans-serif;
+
+}
+    .mr-container{
+	background-color: rgb(255, 255, 255);
+	width: 1150px;
+	padding: 20px;
+	margin: 0;
+}
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+        
+        .sidenav a, .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+           
+            .sidenav a:hover, .dropdown-btn:hover {
+                color: #f1f1f1;
+            }
+
+    
+     .add-button {
+  background-color: #dd0b7f;
+  color: white;
+  padding: 8px 8px;
+  margin: 100px 550px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  opacity: 0.9;
+  border-radius: 12px;
+}
+
+    .main {
+        margin-left: 100px;
+        font-size: 20px;
+        padding: 0px 10px;
+    }
+
+    
+    .active {
+        background-color: green;
+        color: rgb(241, 241, 241);
+    }
+
+   
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+
+  
+    .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="sidenav">
+        <a href="Homepage.html">Home</a>
+        <a href="SignUp.html">Sign-Up</a>
+        <button class="dropdown-btn">Categories
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="Fiction.html">Fiction</a>
+            <a href="nonFiction.html">Non Fiction</a>
+            <a href="Poetry.html">Poetry</a>
+            <a href="Kids.html">Kids</a>
+            <a href="Self-Help.html">Self-Help</a>
+        </div>
+        <a href="Purchase2.HTML">Your Cart</a>
+    </div>
+    <div>
+        <ol class="cart">
+            <a href="Summary.html">
+                Sumarry : <span>0</span>
+            </a>
+        </ol>
+    </div>
+    <div>
+        <style> h1{text-align: center;}</style>
+        <h1>Your Summary Page</h1>
+        <br>
+        <div class="container-products">
+            <div class="product-header">
+                <h5 class="product-title">CHOSEN BOOK</h5>
+                <h5 class="price sm-hide">PRICE</h5>
+                <h5 class="quantity">QUANTITY</h5>
+                <h5 class="total">TOTAL</h5>
+            </div>
+            <div class="products">
+                <p id="demo"></p>
+            <p id="test"></p>
+            </div>
+        </div>
+        <div>
+            <button class="add-button">Pay Now</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+
+</html>

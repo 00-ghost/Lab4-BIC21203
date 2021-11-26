@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<style>
+    .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+
+        .sidenav a, .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+
+            .sidenav a:hover, .dropdown-btn:hover {
+                color: #f1f1f1;
+            }
+
+
+    .main {
+        margin-left: 200px;
+        font-size: 20px;
+        padding: 0px 10px;
+    }
+
+
+    .active {
+        background-color: green;
+        color: white;
+    }
+
+
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+
+
+    .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #f1f1f1;
+        padding: 20px;
+        font-family: Arial;
+    }
+ 
+    .content {
+        background-color: white;
+        padding: 10px;
+    }
+
+   
+    @media screen and (max-width: 900px) {
+        .column {
+            width: 50%;
+        }
+    }
+
+    
+    @media screen and (max-width: 600px) {
+        .column {
+            width: 100%;
+        }
+    }
+</style>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="main">
+
+        <style> h2,h3,h5,table {text-align: center;}</style>
+        <h2>KIDS SECTION</h2>
+        <h3>*Parents discretion required*</h3>
+        <h5>Note : Click The Title For Store Redirection</h5>
+        <p></p>
+
+                    <TABLE border="10">
+                    <img src="K1.png" width="300" height="393">
+                    <TR><TD>Code<TD>K0001
+                    <TR><TD>Title<TD><a href="https://shopee.com.my/DR-SEUSS--The-Cat-in-the-Hat-Comes-Back-Hard-Cover-i.7089301.10906353125">The Cat in the Hat
+                    <TR><TD>Author<TD>Dr.Seuss
+                    <TR><TD>Description<TD>The Cat in the Hat is a 1957 children's book written and illustrated by the American author Theodor Geisel, using the pen name Dr. Seuss. The story centers on a tall anthropomorphic cat who wears a red and white-striped hat and a red bow tie
+                    <TR><TD>Avalibility<TD>Avalible
+                    </Table>
+<P></P>
+                    <TABLE border="10">
+                    <img src="K2.jpg" width="300" height="393">
+                    <TR><TD>Code<TD>K0002
+                    <TR><TD>Title<TD><a href="https://www.bookdepository.com/The-Tale-Of-Peter-Rabbit-Beatrix-Potter/9780723247708?redirected=true&utm_medium=Google&utm_campaign=Base1&utm_source=MY&utm_content=The-Tale-Of-Peter-Rabbit&selectCurrency=MYR&w=AFFZAU9SSCSN6NA8V9QG">The Tale of Peter Rabbit
+                    <TR><TD>Author<TD>Beatrix Potter
+                    <TR><TD>Description<TD>The Tale of Peter Rabbit is a children's book written and illustrated by Beatrix Potter that follows mischievous and disobedient young Peter Rabbit as he gets into, and is chased around, the garden of Mr. McGregor. He escapes and returns home to his mother, who puts him to bed after offering him chamomile-tea
+                    <TR><TD>Avalibility<TD>Avalible
+                    </Table>
+<P></P>
+                    <TABLE border="10">
+                    <img src="K3.jpg" width="300" height="393">
+                    <TR><TD>Code<TD>K0003
+                    <TR><TD>Title<TD><a href="https://www.bookdepository.com/The-Ugly-Duckling-Hans-Christian-Andersen/9780735821460?redirected=true&utm_medium=Google&utm_campaign=Base2&utm_source=MY&utm_content=The-Ugly-Duckling&selectCurrency=MYR&w=AFFZAU9SSBLFBVA8V9QG">The Ugly Duckling
+                    <TR><TD>Author<TD> Hans Christian Andersen
+                    <TR><TD>Description<TD>"The Ugly Duckling" is a Danish literary fairy tale by Danish poet and author Hans Christian Andersen. It was first published on 11 November 1843 in New Fairy Tales. First Volume. First Collection, with three other tales by Andersen in Copenhagen, Denmark to great critical acclaim
+                    <TR><TD>Avalibility<TD>Avalible
+                    </Table>
+<P></P>
+
+<div class="sidenav">
+    <a href="Homepage.html">Home</a>
+    <a href="SignUp.html">Sign-Up</a>
+    <button class="dropdown-btn">Categories
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+        <a href="Fiction.html">Fiction</a>
+        <a href="nonFiction.html">Non Fiction</a>
+        <a href="Poetry.html">Poetry</a>
+        <a href="Kids.html">Kids</a>
+        <a href="Self-Help.html">Self-Help</a>
+    </div>
+    <a href="Purchase2.HTML">Your Cart</a>
+</div>
+    </div>
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+         }
+    </script>
+</body>
+</html>
